@@ -13,17 +13,12 @@ class MyApp extends StatelessWidget{
         //   title: Text('Welcome to Flutter'),
         // ),
         body: Center(
-          child: Text(
-            '测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试',
-            textAlign: TextAlign.left,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              fontSize: 20.0,
-              color: Color.fromARGB(255, 255, 100, 125),
-              decoration: TextDecoration.lineThrough,
-              decorationStyle: TextDecorationStyle.solid
-            ),
+          child: Container(
+            child: Text('测试测试测试测试测',style: TextStyle(fontSize: 40.0),),
+            alignment: Alignment.centerLeft,
+            width: 500.0,
+            height: 400.0,
+            color: Colors.lightBlue,
           ),
         ),
       ),
