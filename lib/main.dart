@@ -14,19 +14,16 @@ class MyApp extends StatelessWidget{
         // ),
         body: Center(
           child: Container(
-            child: Text('测试测试测试测试测',style: TextStyle(fontSize: 40.0),),
-            alignment: Alignment.topLeft,
-            width: 500.0,
-            height: 400.0,
-            // color: Colors.lightBlue,
-            padding: const EdgeInsets.fromLTRB(10.0, 20.0, 0.0, 0.0),
-            margin: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
-            decoration: new BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Colors.lightBlue, Colors.greenAccent, Colors.purple]
-              ),
-              border: Border.all(width: 2.0, color: Colors.red)
+            child: new Image.network(
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoYQcP4HU0dTriNDBsI7W0GfcJLQcZRpTjzy7PQ8TQnr21qmh_',
+              fit:BoxFit.contain,
+              color: Colors.lightGreen,
+              colorBlendMode: BlendMode.colorBurn,
+              repeat: ImageRepeat.noRepeat,
             ),
+            width: 300.0,
+            height: 200.0,
+            color: Colors.lightBlue,
           ),
         ),
       ),
