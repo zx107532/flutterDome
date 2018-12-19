@@ -64,7 +64,7 @@ class ListDynamic extends StatelessWidget {
       itemCount: item.length,
       itemBuilder: (context, index) {
         return new ListTile(
-          title: new Text('${item[index]}'),
+          title: new Text('${item[index]}$index'),
         );
       },
     );
