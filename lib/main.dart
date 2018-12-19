@@ -71,8 +71,8 @@ class ListDynamic extends StatelessWidget {
   }
 }
 
-/*网格列表*/
-class GridList extends StatelessWidget {
+/*图片网格列表*/
+class ImageGridList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -87,6 +87,37 @@ class GridList extends StatelessWidget {
         new Image.network('https://c.pxhere.com/photos/ee/ae/fog_dam_water_cold_winter_s_o_paulo_paraibuna_landscape-1278660.jpg!d'),
         new Image.network('https://c.pxhere.com/photos/d1/e3/rio_river_pond_lake_water_nature_sunset_landscape-1224328.jpg!d'),
         new Image.network('https://c.pxhere.com/images/8f/04/15f4e99ba8b071b3ca061e602bda-1443939.jpg!d')
+      ],
+    );
+  }
+}
+
+/*网格列表*/
+class GridList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return GridView(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        mainAxisSpacing: 5.0,
+        crossAxisSpacing: 5.0,
+        childAspectRatio: 0.7
+      ),
+      padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0),
+      children: <Widget>[
+        new Image.network('https://c.pxhere.com/images/8f/04/15f4e99ba8b071b3ca061e602bda-1443939.jpg!d',fit: BoxFit.cover,),
+        new Image.network('http://seopic.699pic.com/photo/50057/4433.jpg_wh1200.jpg',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/photos/e1/fe/pond_brazil_blue_lagoon_water_landscape-1340028.jpg!d',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/photos/ee/ae/fog_dam_water_cold_winter_s_o_paulo_paraibuna_landscape-1278660.jpg!d',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/photos/d1/e3/rio_river_pond_lake_water_nature_sunset_landscape-1224328.jpg!d',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/images/8f/04/15f4e99ba8b071b3ca061e602bda-1443939.jpg!d',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/images/8f/04/15f4e99ba8b071b3ca061e602bda-1443939.jpg!d',fit: BoxFit.cover,),
+        new Image.network('http://seopic.699pic.com/photo/50057/4433.jpg_wh1200.jpg',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/photos/e1/fe/pond_brazil_blue_lagoon_water_landscape-1340028.jpg!d',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/photos/ee/ae/fog_dam_water_cold_winter_s_o_paulo_paraibuna_landscape-1278660.jpg!d',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/photos/d1/e3/rio_river_pond_lake_water_nature_sunset_landscape-1224328.jpg!d',fit: BoxFit.cover,),
+        new Image.network('https://c.pxhere.com/images/8f/04/15f4e99ba8b071b3ca061e602bda-1443939.jpg!d',fit: BoxFit.cover,)
       ],
     );
   }
