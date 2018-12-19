@@ -104,7 +104,7 @@ class GridList extends StatelessWidget {
         crossAxisSpacing: 5.0,
         childAspectRatio: 0.7
       ),
-      padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0),
+      padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 10.0),
       children: <Widget>[
         new Image.network('https://c.pxhere.com/images/8f/04/15f4e99ba8b071b3ca061e602bda-1443939.jpg!d',fit: BoxFit.cover,),
         new Image.network('http://seopic.699pic.com/photo/50057/4433.jpg_wh1200.jpg',fit: BoxFit.cover,),
