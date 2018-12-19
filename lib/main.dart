@@ -15,10 +15,12 @@ class MyApp extends StatelessWidget{
         body: Center(
           child: Container(
             child: Text('测试测试测试测试测',style: TextStyle(fontSize: 40.0),),
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.topCenter,
             width: 500.0,
             height: 400.0,
             color: Colors.lightBlue,
+            // padding: const EdgeInsets.all(20.0),
+            padding: EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 0.0),
           ),
         ),
       ),
