@@ -158,7 +158,7 @@ class  ColumnWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end, // 主轴设置
       children: <Widget>[
         Text('第一个'),
-        Text('第二个第二个'),
+        Expanded(child: Text('第二个第二个')),
         Text('第三个第三个第三个'),
         Text('第四个第四个第四个第四个'),
       ],
