@@ -128,11 +128,11 @@ class  RowWidget  extends StatelessWidget {
     // TODO: implement build
     return Row(
       children: <Widget>[
-        Expanded(child: RaisedButton(
+        RaisedButton(
           onPressed: (){},
           color: Colors.redAccent,
           child: Text('红色按钮'),
-        )),
+        ),
         Expanded(child: RaisedButton(
           onPressed: (){},
           color: Colors.orangeAccent,
