@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: '练习Flutter',
       home: Scaffold(
         appBar: AppBar(title: new Text('测试测试a')),
-        body: RowWidget(),
+        body: ColumnWidget(),
       ),
     );
   }
@@ -143,6 +143,24 @@ class  RowWidget  extends StatelessWidget {
           color: Colors.greenAccent,
           child: Text('绿色按钮'),
         )
+      ],
+    );
+  }
+}
+
+/*垂直布局*/
+class  ColumnWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end, // 副轴5设置
+      mainAxisAlignment: MainAxisAlignment.end, // 主轴设置
+      children: <Widget>[
+        Text('第一个'),
+        Text('第二个第二个'),
+        Text('第三个第三个第三个'),
+        Text('第四个第四个第四个第四个'),
       ],
     );
   }
