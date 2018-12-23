@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: '练习Flutter',
       home: Scaffold(
         appBar: AppBar(title: new Text('测试测试a')),
-        body: ColumnWidget(),
+        body: StackWidget(),
       ),
     );
   }
@@ -162,6 +162,34 @@ class  ColumnWidget extends StatelessWidget {
         Text('第三个第三个第三个'),
         Text('第四个第四个第四个第四个'),
       ],
+    );
+  }
+}
+
+/*层叠布局*/
+class StackWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var stack = new  Stack(
+      alignment: const FractionalOffset(0.5, 0.8), // 设置普通层叠位置
+      children: <Widget>[
+        CircleAvatar(
+          backgroundImage: NetworkImage('http://seopic.699pic.com/photo/50057/4433.jpg_wh1200.jpg'),
+          radius: 100.0, // 弧度
+        ),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.lightBlueAccent
+          ),
+          padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 10.0),
+          child: Text('层叠文字'),
+          height: 40.0,
+        )
+      ],
+    );
+    // TODO: implement build
+    return Center(
+      child: stack,
     );
   }
 }
