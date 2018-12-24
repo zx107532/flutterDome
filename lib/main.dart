@@ -283,7 +283,6 @@ class FirstScreen extends StatelessWidget {
     );
   }
 }
-
 class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
