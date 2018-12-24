@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main(){
+  runApp(MaterialApp(
+    title: '导航示例',
+    home: FirstScreen(),
+  ));
+}
 
 class MyApp extends StatelessWidget {
 //  final List<String> items;
@@ -240,7 +245,7 @@ class CardWidget extends StatelessWidget {
           Divider(color: Colors.deepOrange,),
           ListTile(
               title: Text('重庆市', style: TextStyle(fontWeight: FontWeight.w500),),
-              subtitle: Text('飞羽寻梦'),
+              subtitle: Text('飞羽寻梦',style: TextStyle(color: Colors.orange),),
               leading: Icon(Icons.airport_shuttle,color: Colors.lightBlueAccent,)
           ),
           Divider(color: Colors.red,),
@@ -253,5 +258,49 @@ class CardWidget extends StatelessWidget {
       ),
     );
     return card;
+  }
+}
+
+/*导航*/
+class FirstScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('导航测试'),
+      ),
+      body: Center(
+        child: RaisedButton(
+          child: Text('查看详情列表'),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => SecondScreen()
+              ));
+            }
+        ),
+      ),
+    );
+  }
+}
+
+class SecondScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('二级页面'),
+      ),
+      body: Center(
+        child: RaisedButton(
+            child: Text('返回',style: TextStyle(color: Colors.white),),
+            color: Colors.deepPurpleAccent,
+            onPressed: (){
+              Navigator.pop(context);
+            }
+        ),
+      ),
+    );
   }
 }
