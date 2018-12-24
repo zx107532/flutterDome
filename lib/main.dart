@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: '练习Flutter',
       home: Scaffold(
         appBar: AppBar(title: new Text('测试测试a')),
-        body: StackWidget(),
+        body: CardWidget(),
       ),
     );
   }
@@ -191,5 +191,67 @@ class StackWidget extends StatelessWidget {
     return Center(
       child: stack,
     );
+  }
+}
+
+/*层叠定位布局*/
+class StackPositionWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var stack = new  Stack(
+      alignment: const FractionalOffset(0.5, 0.8), // 设置普通层叠位置
+      children: <Widget>[
+        CircleAvatar(
+          backgroundImage: NetworkImage('http://seopic.699pic.com/photo/50057/4433.jpg_wh1200.jpg'),
+          radius: 100.0, // 弧度
+        ),
+        Positioned(
+          top: 10.0,
+          left: 10.0,
+          child: Text('层叠定位布局'),
+        ),
+        Positioned(
+          bottom: 10.0,
+            right: 10.0,
+            child: Text('层叠定位')
+        )
+      ],
+    );
+    // TODO: implement build
+    return Center(
+      child: stack,
+    );
+  }
+}
+
+/*卡片布局*/
+class CardWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    var card = Card(
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            title: Text('四川省成都市', style: TextStyle(fontWeight: FontWeight.w500),),
+            subtitle: Text('飞羽寻梦'),
+            leading: Icon(Icons.airport_shuttle,color: Colors.lightBlueAccent,)
+          ),
+          Divider(color: Colors.deepOrange,),
+          ListTile(
+              title: Text('重庆市', style: TextStyle(fontWeight: FontWeight.w500),),
+              subtitle: Text('飞羽寻梦'),
+              leading: Icon(Icons.airport_shuttle,color: Colors.lightBlueAccent,)
+          ),
+          Divider(color: Colors.red,),
+          ListTile(
+              title: Text('蜀国', style: TextStyle(fontWeight: FontWeight.w500),),
+              subtitle: Text('飞羽寻梦'),
+              leading: Icon(Icons.ac_unit,color: Colors.lightBlueAccent,)
+          )
+        ],
+      ),
+    );
+    return card;
   }
 }
