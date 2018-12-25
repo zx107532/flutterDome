@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/views/home.dart';
 
 void main(){
   runApp(MaterialApp(
@@ -275,7 +276,7 @@ class FirstScreen extends StatelessWidget {
           child: Text('查看详情列表'),
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => SecondScreen()
+                  builder: (context) => Home()
               ));
             }
         ),
